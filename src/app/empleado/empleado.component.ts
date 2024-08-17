@@ -10,7 +10,11 @@ export class EmpleadoComponent implements OnInit {
   Nombre = "Juan";
   private Apellido = "Mosquera";
   Edad = 23;
-  Empresa = "BiteCode";
+  // Empresa = "BiteCode";
+
+  nombreEmpresa(value:string){
+
+  }
 
   getApellido(){
     return this.Apellido;
@@ -19,5 +23,4 @@ export class EmpleadoComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
