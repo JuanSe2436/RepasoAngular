@@ -12,6 +12,14 @@ export class EmpleadoComponent implements OnInit {
   Edad = 23;
   // Empresa = "BiteCode";
 
+//Binding
+  enableBox = false;
+
+  usuRegistrado = true;
+
+getRegistroUsuario(){
+  this.usuRegistrado = false
+}
   nombreEmpresa(value:string){
 
   }

@@ -8,5 +8,11 @@ Introduce la empresa: <input type="text" #Empresa>
 <input type="button" value="Vale" (click)="nombreEmpresa(Empresa.value)" >
 <br>
 <p>Numero de telefono: {{Telefono.value}}</p>
-Introduce el numero de telefono: <input type="text" #Telefono (keyup)="0">
+Introduce el numero de telefono: <input type="text" #Telefono (keyup)="0" [disabled]="enableBox">
+<br>
+<br>
+
+Registrado <input type="checkbox" id="registro" [checked]="usuRegistrado">
+
+{{getRegistroUsuario()}}
 
