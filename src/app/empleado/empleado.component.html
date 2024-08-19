@@ -11,8 +11,8 @@ Introduce la empresa: <input type="text" #Empresa>
 Introduce el numero de telefono: <input type="text" #Telefono (keyup)="0" [disabled]="enableBox">
 <br>
 <br>
-
-Registrado <input type="checkbox" id="registro" [checked]="usuRegistrado">
-
+{{textoRegistro}} <br>
+Registrado: <input type="radio" value="Si" name="nRegistro" id="registro" [checked]="usuRegistrado" (click)="setUsuarioRegistrado($event)"> <br>
+No registrado" <input type="radio" value="No" name="nRegistro" (click)="setUsuarioRegistrado($event)"> <br>
 {{getRegistroUsuario()}}
 

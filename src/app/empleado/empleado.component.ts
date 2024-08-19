@@ -3,32 +3,41 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-empleado',
   templateUrl: './empleado.component.html',
-  styleUrls: ['./empleado.component.css']
+  styleUrls: ['./empleado.component.css'],
 })
 export class EmpleadoComponent implements OnInit {
-
-  Nombre = "Juan";
-  private Apellido = "Mosquera";
+  Nombre = 'Juan';
+  private Apellido = 'Mosquera';
   Edad = 23;
   // Empresa = "BiteCode";
 
-//Binding
+  //Binding
   enableBox = false;
 
-  usuRegistrado = true;
+  usuRegistrado = false;
 
-getRegistroUsuario(){
-  this.usuRegistrado = false
-}
-  nombreEmpresa(value:string){
+  textoRegistro = "No hay nadie registrado";
 
+  getRegistroUsuario() {
+    this.usuRegistrado = false;
   }
 
-  getApellido(){
+  setUsuarioRegistrado(event:Event){
+    if ((<HTMLInputElement>event.target).value== "Si") {
+      this.textoRegistro="El usuario se acaba de registrar";
+    }else{
+      this.textoRegistro="No hay nadie registrado";
+    }
+    //alert ("El usuario se acaba de registrar");
+    //this.textoRegistro="El usuario se acaba de registrar";
+  }
+
+  nombreEmpresa(value: string) {}
+
+  getApellido() {
     return this.Apellido;
   }
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }
