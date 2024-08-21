@@ -1,11 +1,14 @@
 <p>Nombre del empleado: {{Nombre}}</p>
 <p>Apellido del empleado: {{getApellido()}}</p>
 <p>Edad del empleado: {{Edad<18 ? "menor de edad": "mayor de edad"}}</p>
-<p>Empresa del empleado: {{Empresa.value}}</p>
-Introduce la empresa: <input type="text" #Empresa>
+<p>Empresa del empleado: {{Empresa}}</p>
+
+<!-- Introduce la empresa: <input type="text" (input)="cambiaEmpresa($event)"> -->
+Introduce la empresa: <input type="text" [(ngModel)] = "Empresa">
+<!-- Introduce la empresa: <input type="text" #Empresa> -->
 <br>
 <br>
-<input type="button" value="Vale" (click)="nombreEmpresa(Empresa.value)" >
+<!-- <input type="button" value="Vale" (click)="nombreEmpresa(Empresa.value)" > -->
 <br>
 <p>Numero de telefono: {{Telefono.value}}</p>
 Introduce el numero de telefono: <input type="text" #Telefono (keyup)="0" [disabled]="enableBox">

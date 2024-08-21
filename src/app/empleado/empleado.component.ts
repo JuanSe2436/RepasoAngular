@@ -9,14 +9,19 @@ export class EmpleadoComponent implements OnInit {
   Nombre = 'Juan';
   private Apellido = 'Mosquera';
   Edad = 23;
-  // Empresa = "BiteCode";
 
+  Empresa = "BiteCode";
   //Binding
   enableBox = false;
 
   usuRegistrado = false;
 
   textoRegistro = "No hay nadie registrado";
+
+  // cambiaEmpresa(event:Event){
+  //   this.Empresa=(<HTMLInputElement>event.target).value;
+
+  // }
 
   getRegistroUsuario() {
     this.usuRegistrado = false;
